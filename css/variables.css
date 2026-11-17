@@ -1,0 +1,82 @@
+/* Переменные: цвета, размеры, шрифты. Тема переключается атрибутом data-theme на <html>. */
+
+:root {
+  --font-head: 'Montserrat', 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', Arial, sans-serif;
+
+  --radius: 12px;
+  --radius-lg: 16px;
+  --gap: 16px;
+  --sidebar-width: 248px;
+  --topbar-height: 64px;
+  --content-max: 1200px;
+}
+
+/* Тёмная тема (по умолчанию), палитра по мотивам платформы School 21 */
+:root,
+[data-theme="dark"] {
+  --bg: #1b2230;
+  --bg-side: #151b27;
+  --surface: #262f40;
+  --surface-2: #2f3a50;
+  --border: #3a455a;
+
+  --text: #eaf0f8;
+  --text-muted: #9aa7bc;
+  --heading: #ffffff;
+
+  --accent: #20e3b0;
+  --accent-2: #19c2d8;
+  --accent-soft: rgba(32, 227, 176, 0.12);
+  --on-accent: #0f1722;
+  --violet: #7b2ff7;
+  --link: #5cc8f5;
+
+  --info: #7dd3fc;
+  --info-bg: rgba(125, 211, 252, 0.16);
+  --warn: #ffc857;
+  --warn-bg: rgba(255, 200, 87, 0.16);
+  --ok: #20e3b0;
+  --ok-bg: rgba(32, 227, 176, 0.16);
+  --danger: #ff8a8a;
+  --danger-bg: rgba(255, 107, 107, 0.16);
+  --violet-text: #c4a4ff;
+  --violet-bg: rgba(123, 47, 247, 0.22);
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --backdrop: rgba(8, 12, 20, 0.7);
+}
+
+/* Светлая тема */
+[data-theme="light"] {
+  --bg: #f3f5f9;
+  --bg-side: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #eef2f8;
+  --border: #d9dfe8;
+
+  --text: #1b2430;
+  --text-muted: #5b6778;
+  --heading: #111827;
+
+  --accent: #0b8a6f;
+  --accent-2: #0a7f94;
+  --accent-soft: rgba(11, 138, 111, 0.1);
+  --on-accent: #ffffff;
+  --violet: #6d28d9;
+  --link: #1d6fc2;
+
+  --info: #1d6fc2;
+  --info-bg: #e3effc;
+  --warn: #8a5300;
+  --warn-bg: #fff1d6;
+  --ok: #17734f;
+  --ok-bg: #e2f5ea;
+  --danger: #b42323;
+  --danger-bg: #fde7e7;
+  --violet-text: #5b21b6;
+  --violet-bg: #ede4fd;
+
+  --shadow: 0 10px 30px rgba(20, 30, 50, 0.12);
+  --backdrop: rgba(20, 30, 50, 0.45);
+}

@@ -1,0 +1,97 @@
+/* Адаптивность: планшеты и смартфоны */
+
+@media (max-width: 1000px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-main,
+  .grid-side { grid-template-columns: 1fr; }
+
+  .auth { grid-template-columns: 1fr; }
+  .auth__hero { padding: 32px 24px; }
+  .auth__hero h1 { font-size: 30px; }
+}
+
+@media (max-width: 760px) {
+  h1 { font-size: 26px; }
+  h2 { font-size: 21px; }
+
+  .topbar { padding: 0 8px; }
+  .icon-btn.burger { display: inline-grid; }
+  .brand span { display: none; }
+  .user-chip__text { display: none; }
+  .user-chip { padding: 4px; }
+
+  .sidebar {
+    position: fixed;
+    top: var(--topbar-height);
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    width: 82%;
+    max-width: 300px;
+    transform: translateX(-100%);
+    transition: transform 0.2s;
+    box-shadow: var(--shadow);
+  }
+  .sidebar.is-open { transform: none; }
+
+  .overlay.is-open {
+    position: fixed;
+    inset: var(--topbar-height) 0 0 0;
+    z-index: 45;
+    display: block;
+    background: var(--backdrop);
+  }
+
+  .content { padding: 16px; }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 { grid-template-columns: 1fr; }
+
+  .btn { width: 100%; }
+  .row > .btn,
+  .card-title .btn,
+  .page-head .btn,
+  .toolbar > .btn { width: auto; }
+  .page-head .btn { width: 100%; }
+
+  .course-head { min-height: 96px; padding: 18px; }
+
+  /* Таблицы превращаются в список карточек */
+  .table-wrap.is-stacked { border: 0; background: none; }
+  .table.stacked thead { display: none; }
+  .table.stacked,
+  .table.stacked tbody,
+  .table.stacked tr,
+  .table.stacked td { display: block; width: 100%; }
+  .table.stacked tr {
+    margin-bottom: 12px;
+    padding: 6px 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+  }
+  .table.stacked td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 16px;
+    border: 0;
+    text-align: right;
+  }
+  .table.stacked td::before {
+    content: attr(data-label);
+    flex: none;
+    color: var(--text-muted);
+    font-size: 13px;
+    text-align: left;
+  }
+
+  .cal__day { min-height: 56px; padding: 3px; font-size: 12px; }
+  .cal__event { height: 6px; padding: 0; font-size: 0; }
+
+  .popover { position: fixed; top: calc(var(--topbar-height) + 4px); right: 12px; left: 12px; width: auto; max-width: none; }
+  .profile-head { flex-direction: column; align-items: flex-start; }
+}

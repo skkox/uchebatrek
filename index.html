@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="УчебаТрек — приложение для сопровождения обучения: курсы, задания, загрузка работ, оценки и сроки.">
+  <title>УчебаТрек — сопровождение обучения</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Перейти к содержимому</a>
+
+  <!-- Сюда скрипты выводят экран входа или основной каркас приложения -->
+  <div id="root"></div>
+
+  <div id="toasts" aria-live="polite"></div>
+  <div id="modal-root"></div>
+
+  <noscript>Для работы приложения необходимо включить JavaScript.</noscript>
+
+  <!-- Порядок важен: сначала настройки и утилиты, потом данные, затем страницы -->
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/seed.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/fileStore.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/services/tasks.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/pages/login.js"></script>
+  <script src="js/pages/dashboard.js"></script>
+  <script src="js/pages/courses.js"></script>
+  <script src="js/pages/course.js"></script>
+  <script src="js/pages/task.js"></script>
+  <script src="js/pages/grades.js"></script>
+  <script src="js/pages/calendar.js"></script>
+  <script src="js/pages/review.js"></script>
+  <script src="js/pages/profile.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
